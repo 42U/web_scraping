@@ -1,0 +1,13 @@
+none yet lol... but so many bookmarks and much videos
+
+for using variables in a string
+	('hanning' + str(num) + '.pdf')
+	'hanning%(num)s.pdf' % locals()
+	'hanning{0}.pdf'.format(num)
+	f'hanning{0}.pdf'
+	string.Template('hanning'${num}.pdf').substitute(locals())
+
+#name a new variable after class has been defined
+
+EZclap.new = "this value is for the new var in ez clap"
+
