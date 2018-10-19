@@ -1,13 +1,18 @@
 import requests
 from bs4 import BeautifulSoup as soup
 
+def to_file(fildes, info):
+    filedes.write(info)
+    filedes.write('\n')
+
 # input configuration file (kind off)
 html_file = open("garage_door", 'r')
 
 # output files where the results go
 fd = open("garage", "a")
-fd1 = open("locales", "w+")
+fd1 = open("locales", "w")
 fd2 = open("searches", "a")
+fd3 = open("short_list", 'w')
 
 # locale links are extracted here
 bowl_ll = soup(html_file, "html.parser")
@@ -43,13 +48,43 @@ max_miles = input("Enter max miles\n")
 # website template link
 url = f"https://{locale}.craigslist.org/search/mca?min_price={min_price}&max_price={max_price}&auto_make_model={make}'+'{model}&min_engine_displacement_cc={min_disp}&max_engine_displacement_cc={max_disp}&min_auto_year=2002&max_auto_year=2019&min_auto_miles={min_miles}&max_auto_miles={max_miles}&auto_title_status=1&auto_title_status=5"
 
+quick_link = []
+save_all = []
 save = []
 fd2.write(url)
+cycles = []
+random = []
+i = 1
+
+# this should be put in to a for loop so that it can go through all areas
 source = requests.get(url)
 plain = source.text
+
+# this brings back the search in a locale
 bowl = soup(plain, "html.parser")
-fd.write("___LISTING____ # ")
-fd.write("1")
-fd.write("\n")
-fd.write("something\n")
+
+# this will copy all the data i want from the search
+save_all = bowl.find_all('li', attrs={'class' : 'result-row'})
+
+# this separates each result into a pointer
+for bike in bowl.find_all('li', attrs={'class' : 'result-row'}):
+    fd.write("___LISTING____ # ")
+    fd.write(i)
+    fd.write("\n")
+    fd.write(bike)
+    fd.write('\n')
+    fd.write("__ B R I E F __\n")
+    quick = bike.find('a').get('href')
+    fd.write(" quick link \n")
+    fd.write(quick)
+    fd.write('\n')
+    source2 = requests.get(quick)
+    plain2 = source2.text
+    desc = soup(plain2, "html.parser")
+# this goes in to the bike description page
+# trouble extracting the 'href' from the <a> tag
+# ref = save[0].find('a', href=True)
+# ref.get('href')
+# https://craigslist.org
+    i += 1
 print()
