@@ -1,3 +1,4 @@
+import os.remove as clear
 import re
 import requests
 from bs4 import BeautifulSoup as soup
@@ -66,16 +67,24 @@ for link in all_links:
     fd1.write('\n')
 fd1.closed
 
-locale = link
-make = "suzuki"
-model = "gsxr"
+# had to finagle the all_links string to get a list of the locales (ezclap)
+gimme = []
+for loco in all_links:
+    gimme = all_links[loco].split("//")
+    gimme = gimme[1].split(".")
+    gimme = gimme[0]
+town = gimme
+
+locale = town
+make = input("Make: Suzuki, Yamaha, Honda, Kawasaki, etc..")
+model = input("Model: GSXR, R1, CBR, ZX10R, etc...")
 sep = "+"
-min_price = "0"
-max_price = "6500"
-min_disp = "748"
-max_disp = "1002"
-min_miles = "500"
-max_miles = "16666"
+min_price = input("Enter min price")
+max_price = input("Enter max price")
+min_disp = input("Enter min displacement")
+max_disp = input("Enter max displacement")
+min_miles = input("Enter min miles")
+max_miles = input("Enter max miles")
 
 def init():
 
@@ -89,18 +98,25 @@ def init():
     i = 0
     for x in link:
         i += 1
+        # this is adding the search string to the end of the locale string
         url_s.append(x+params)
         src = requests.get(x+params)
         plu = src.text
+        
+        # this is where you get the info from the page about the bike
         bike_g = soup(plu, "html.parser")
         fd.write("__LISTING__\n")
         fd.write(i, "\n")
+        
+        # need to extract the price / description / other info
         price = bike_g.
 
+        # this is where you look to find each individual bike
         fd.write("Price: ", price)
         fd.write(bike_g.findAll('li', {"class" : "result-row"}))
         bike_s = (bike_g.findAll('li', {"class" : "result-row"})
             #need to finish adding the path to the tag that has
             # price and web
+            # and need to setup a function to open the description page of each bike
     print(bike_g)
 
