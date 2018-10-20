@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as soup
 
+# this doesn't work idk why
 def to_file(fildes, info):
     filedes.write(info)
     filedes.write('\n')
@@ -74,6 +75,7 @@ for bike in bowl.find_all('li', attrs={'class' : 'result-row'}):
     fd.write(bike)
     fd.write('\n')
     fd.write("__ B R I E F __\n")
+# this goes in to the bike description page
     quick = bike.find('a').get('href')
     fd.write(" quick link \n")
     fd.write(quick)
@@ -81,10 +83,32 @@ for bike in bowl.find_all('li', attrs={'class' : 'result-row'}):
     source2 = requests.get(quick)
     plain2 = source2.text
     desc = soup(plain2, "html.parser")
-# this goes in to the bike description page
-# trouble extracting the 'href' from the <a> tag
 # ref = save[0].find('a', href=True)
 # ref.get('href')
-# https://craigslist.org
+    b_title = desc.find('span', attrs={'id' : 'titletextonly'}).text.strip()
+    b_price = desc.find('span', attrs={'class' : 'price'}).text.strip()
+    b_text = desc.find('section', attrs={'id' : 'postingbody'}).text.strip()
+    plain2 = desc.find('p', attrs={'class' : 'attrgroup'}).text.strip()
+    fd.write(str(plain2))
+    fd.write('\n')
+    fd.write('\n')
+    fd.write(b_title)
+    print(b_title)
+    fd.write('\n')
+    fd.write('\n')
+    fd.write(b_price)
+    fd.write('\n')
+    fd.write('\n')
+    fd.write(b_text)
+    fd.write('\n')
+    fd.write('\n')
+    fd.write('_____ END OF BIKE DETAILS _____\n')
+    fd.write('\n')
+    fd.write('\n')
+    fd.write('\n')
+    fd.write('\n')
+    fd.write('\n')
+    fd.write('\n')
     i += 1
-print()
+
+end_of_program = []

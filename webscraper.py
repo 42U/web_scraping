@@ -93,4 +93,7 @@ for x in link:
             #need to finish adding the path to the tag that has
             # price and web
 print(bike_g)
+
+# random
+#summary = bowl.article.find('ul', class_='clfooter')
     
