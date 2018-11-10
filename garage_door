@@ -1,3 +1,6 @@
+# this file is what limits the searching to only the United States. If I wanted to be more specific to which states it
+# searches I could remove the extra states and links
+
 <h4>Alabama</h4>
 <ul>
 <li><a href="https://auburn.craigslist.org/">auburn</a></li>
