@@ -1,3 +1,4 @@
+# the program reads this file and searches through the links and extracts each link in to a variable called locale.
 # this file is what limits the searching to only the United States. If I wanted to be more specific to which states it
 # searches I could remove the extra states and links
 
