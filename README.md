@@ -15,7 +15,7 @@ from the directory containing all the files from this repo:
 
 python3 clist_motorcycle_scraper.py
 
-![alt text](https://github.com/42U/web_scraping/blob/master/resources/clist_42u2.png)
+![alt text](https://github.com/42U/web_scraping/blob/master/resources/clist_42u5.png)
 
 you do not have to fill out each field but you will get a lot off results and it will take a long time. you would be
 essentially searching all of craigslist for every motorcycle listed.
