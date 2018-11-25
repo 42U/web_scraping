@@ -4,6 +4,7 @@ This is a WebScraper that currently only scrapes Craigslist for motorcycles. *(I
 the system you run this on should have python3 AND python3-bs4 installed already.
 there are multiple ways to install these libraries the following is most common for unix:
 ![alt text](https://github.com/42U/web_scraping/blob/master/resources/clist_42u3.png)
+
 sudo apt install python3 python3-bs4
 
 
