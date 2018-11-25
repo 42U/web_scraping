@@ -11,7 +11,7 @@ sudo apt install python3 python3-bs4
 You can git clone the files into a directory and run the following command using a terminal,
 from the directory containing all the files from this repo:
 
-![alt text](https://github.com/42U/web_scraping/blob/master/resources/clist_42u.png)
+![alt text](https://github.com/42U/web_scraping/blob/master/resources/clist_42u4.png)
 
 python3 clist_motorcycle_scraper.py
 
