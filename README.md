@@ -9,7 +9,7 @@ sudo apt install python3 python3-bs4
 
 ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ 
 
-if you have the above completed, proceed with the following
+      if you have the above completed, proceed with the following
 
 
 You can git clone the files into a directory and run the following command using a terminal,
