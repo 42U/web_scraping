@@ -1,8 +1,8 @@
 # web_scraping
 This is a WebScraper that currently only scrapes Craigslist for motorcycles. *(I made this to help me sift through all the bookmarks I had when looking for a motorcycle for myself)
 
-the system you run this on should have python3 AND python3-bs4 installed already on the machine you want to run this
-from. there are multiple ways to install these libraries the following is most common for unix:
+the system you run this on should have python3 AND python3-bs4 installed already.
+there are multiple ways to install these libraries the following is most common for unix:
 
 sudo apt install python3 python3-bs4
 
