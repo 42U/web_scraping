@@ -5,11 +5,11 @@ the system you run this on should have python3 AND python3-bs4 installed already
 there are multiple ways to install these libraries the following is most common for unix:
 ![alt text](https://github.com/42U/web_scraping/blob/master/resources/clist_42u3.png)
 
-sudo apt install python3 python3-bs4
+	sudo apt install python3 python3-bs4
 
 ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ 
 
-      if you have the above completed, proceed with the following
+if you have the above completed, proceed with the following
 
 
 You can git clone the files into a directory and run the following command using a terminal,
@@ -17,8 +17,8 @@ from the directory containing all the files from this repo:
 
 ![alt text](https://github.com/42U/web_scraping/blob/master/resources/clist_42u4.png)
 
-^
-python3 clist_motorcycle_scraper.py
+
+	python3 clist_motorcycle_scraper.py
 
 ![alt text](https://github.com/42U/web_scraping/blob/master/resources/clist_42u5.png)
 
@@ -27,3 +27,4 @@ essentially searching all of craigslist for every motorcycle listed in the U.S.
 
 after it finds all the motorcycles listed, it will output the description and a link to the posting, in a file called bikes.
 
+license: this is a basic use of python3 and beautiful soup 4 module. you are free to use and distribute under the GNU license agreement for which the language you are using.
