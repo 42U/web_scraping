@@ -26,5 +26,3 @@ you do not have to fill out each field but you will get a lot off results and it
 essentially searching all of craigslist for every motorcycle listed in the U.S.
 
 after it finds all the motorcycles listed, it will output the description and a link to the posting, in a file called bikes.
-
-license: this is a basic use of python3 and beautiful soup 4 module. you are free to use and distribute under the GNU license agreement for which the language you are using.
